@@ -1,18 +1,20 @@
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
-    console.log('draw');
-  }
+// let x = 10;
+// let y = x;
+// x = 20;
+
+let x = { value: 10 };
+let y = x;
+x.value = 20;
+
+// let number = 10;
+// function increase(number) {
+//   number++;
+// }
+// increase(number);
+// console.log(number);
+let obj = { value: 10 };
+function increase(obj) {
+  obj.value++;
 }
-
-Circle.call({}, 1)
-Circle.apply({},[1,2]) 
-// const Circle1 = new Function('radius',`this.radius = radius;
-// this.draw = function () {
-//   console.log('draw');
-// }`)
-
-console.log(new Circle(1))
-
-const another = new Circle(1);
-// const circle = new Circle1(1)
+increase(obj);
+console.log(obj.value);s
