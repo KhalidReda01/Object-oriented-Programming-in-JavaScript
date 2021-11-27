@@ -1,34 +1,18 @@
-// console.log("hello world ")
-// const circle = {
-//   raduis: 1,
-//   location: {
-//     x: 1,
-//     y: 1
-//   },
-//   draw: function () {
-//     console.log('draw')
-//   }
-
-// };
-function createCricle(raduis) {
-  return {
-    raduis,
-    draw: function () {
-      console.log("draw from factory function")
-    }
-  }
-}
-
- const circle = createCricle(2);
-circle.draw()
-// Constructor Funciton
-function Circle(raduis) {
-  // console.log("this",this)
-  this.raduis = raduis;
+function Circle(radius) {
+  this.radius = radius;
   this.draw = function () {
-    console.log("draw from constructor function")
+    console.log('draw');
   }
 }
-const another = new Circle(2);
-another.draw();
-// console.log("this",this)
+
+Circle.call({}, 1)
+Circle.apply({},[1,2]) 
+// const Circle1 = new Function('radius',`this.radius = radius;
+// this.draw = function () {
+//   console.log('draw');
+// }`)
+
+console.log(new Circle(1))
+
+const another = new Circle(1);
+// const circle = new Circle1(1)
