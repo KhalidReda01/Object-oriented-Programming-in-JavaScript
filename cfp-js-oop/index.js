@@ -1,11 +1,14 @@
-const circle = {
-  raduis: 1,
-  location: {
-    x: 1,
-    y: 1
-  },
-  draw: function () {
-    console.log('draw');
+
+function createCircle(raduis) {
+  return {
+    raduis   ,
+    draw: function () {
+      console.log('draw from cfp');
+    }
   }
-};
+}
+
+
+const circle = createCircle(2);
+
 circle.draw();
