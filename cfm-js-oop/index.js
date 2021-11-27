@@ -12,5 +12,15 @@ const createCircle =function(raduis){
     }
   }
 }
+//constructor function
 const circle = createCircle(3)
 circle.draw()
+function Circle(raduis) {
+  this.raduis = raduis;
+    this.draw= function() {
+      console.log("cfm draw using constructor function")
+    }
+}
+const anotherCircle = new Circle(4);
+console.log(anotherCircle)
+anotherCircle.draw()
